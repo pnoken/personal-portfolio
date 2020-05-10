@@ -43,7 +43,8 @@ h1, h2 {
   margin: 0;
 }
 .content-wrap {
-  width: 800px;
+  max-width: 800px;
+  width: 85%;
   margin: 0 auto;
   padding: 60px 0;
 }
@@ -55,6 +56,13 @@ h3 {
 }
 .item-details h3 ~ p {
   margin: 0;
+}
+.divider > section {
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-bottom: none;
 }
 /* Profile
 ----------------------------------------------------------------*/
@@ -89,8 +97,7 @@ header {
 
 .project-item {
   overflow: hidden;
-  border-bottom: 1px dashed #343434;
-  padding: 25px 0;
+
 }
 .project-item img {
   float: left;
@@ -114,6 +121,15 @@ background: #A1C6D7;
 
 /* Education
 ----------------------------------------------------------------*/
+.education {
+  background-image: url(../images/porfolio.jpg);
+  background-size: cover;
+  background-position: top right;
+  padding-bottom: 100px ;
+}
+.education p {
+  width: 60%;
+}
 
 /* Contact List
 ----------------------------------------------------------------*/
