@@ -316,12 +316,12 @@ a img.logo-color  {
     width: 100%;
 }
 .home-top-banner.banner-1 {
-	background-image: url("../images/profile/banner-image-1.jpg");
+	background-image: url("https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/IMG_9453.jpg");
 	background-position: center;
 	background-size: cover;
 }
 .home-top-banner.banner-2 {
-	background-image: url("../images/profile/banner-image-2.jpg");
+	background-image: url("https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/IMG_9453.jpg");
 	background-position: center;
 	background-size: cover;
 }
@@ -379,7 +379,7 @@ a img.logo-color  {
     width: 100%;
 }
 #home.home-slider.image-bg {
-    background-image: url("../images/profile/banner-image-2.jpg");
+    background-image: url("https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/IMG_9453.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -441,13 +441,13 @@ a img.logo-color  {
     background-color: rgba(0, 0, 0, 0.7);
 }
 #home .owl-carousel .owl-slide.slide-1 {
-    background-image: url("../images/profile/banner-image-1.jpg");
+    background-image: url("https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/IMG_9453.jpg");
 }
 #home .owl-carousel .owl-slide.slide-2 {
-    background-image: url("../images/profile/banner-image-2.jpg");
+    background-image: url("https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/IMG_9453.jpg");
 }
 #home .owl-carousel .owl-slide.slide-3 {
-    background-image: url("../images/profile/banner-image-1.jpg");
+    background-image: url("https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/IMG_9453.jpg");
 }
 #home .owl-carousel .slider-content {
 	bottom: 0;
