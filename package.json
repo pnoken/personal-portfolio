@@ -12,7 +12,10 @@
     "gray-matter": "^4.0.2",
     "next": "10.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "bootstrap": "^5.0.1",
+    "jquery": "^3.6.0",
+    "@popperjs/core": "^2.9.2"
   },
   "repository": {
     "type": "git",
