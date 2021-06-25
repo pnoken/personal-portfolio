@@ -4,9 +4,9 @@ export default function Footer() {
       <section className="p-5">
       <div className="container">
         <h3>Let's Connect</h3>
-        <a href="https://www.facebook.com/norteypeter" target="_blank"><img className="p-2" src="/images/fb.svg" height="5%" width="5%" /></a>
-        <a href="https://www.instagram.com/pnoken" target="_blank"><img className="p-2" src="/images/ig.svg" height="5%" width="5%" /></a>
-        <a href="https://www.linkedin.com/in/pnokn" target="_blank"><img className="p-2" src="/images/lnkdin.svg" height="5%" width="5%" /></a>
+        <a href="https://www.facebook.com/norteypeter" target="_blank"><img className="p-2" src="/images/fb.svg" height="50px" width="50px" /></a>
+        <a href="https://www.instagram.com/pnoken" target="_blank"><img className="p-2" src="/images/ig.svg" height="50px" width="50px" /></a>
+        <a href="https://www.linkedin.com/in/pnokn" target="_blank"><img className="p-2" src="/images/lnkdin.svg" height="50px" width="50px" /></a>
       </div>
       </section>
       <section className="bg-dark text-light">
