@@ -3,7 +3,7 @@ export default function Banner() {
     <section className="container p-3">
       <div className="row">
         <div className="col-lg-6">
-          <img className="rounded" src="/images/profile.jpg" height="100%" width="95%" />
+          <img className="rounded" src="/images/profile.jpg" height="100%" width="100%" />
         </div>
         <div className="col-lg-6">
           <h1><code>
