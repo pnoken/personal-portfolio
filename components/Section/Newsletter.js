@@ -1,7 +1,7 @@
 export default function Newsletter() {
   return (
     <section style={{ backgroundColor: "#f7fff7" }}>
-      <div className="container p-3">
+      <div className="container p-5">
         <div className="row">
         
           <div className="col-lg-6">

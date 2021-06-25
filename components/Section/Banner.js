@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <section className="container p-3">
+    <section className="container p-5">
       <div className="row">
         <div className="col-lg-6">
           <img className="rounded" src="/images/profile.jpg" height="100%" width="100%" />
