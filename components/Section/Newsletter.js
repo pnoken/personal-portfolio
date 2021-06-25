@@ -1,9 +1,9 @@
 export default function Newsletter() {
   return (
     <section style={{ backgroundColor: "#f7fff7" }}>
-      <div className="container">
+      <div className="container p-3">
       <h3>NewsLetter</h3>
-        <div className="row p-3">
+        <div className="row">
         
           <div className="col-lg-6">
           <img src="/images/email.png" />

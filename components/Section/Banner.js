@@ -1,11 +1,11 @@
 export default function Banner() {
   return (
-    <section className="container">
+    <section className="container p-3">
       <div className="row">
         <div className="col-lg-6">
-          <img className="rounded" src="/images/profile.jpg" height="90%" />
+          <img className="rounded" src="/images/profile.jpg" height="100%" width="95%" />
         </div>
-        <div className="col-lg-6 p-3">
+        <div className="col-lg-6">
           <h1><code>
             I'm Peter Nortey
           </code>
