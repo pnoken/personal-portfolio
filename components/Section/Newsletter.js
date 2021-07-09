@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Newsletter() {
   const [ email, setEmail ] = useState('')
-  const listId = "e3a68b9ac3";
+  const listId = process.env.listId;
   const subscribingUser = {
     // firstName: "Prudence",
     // lastName: "McVankab",

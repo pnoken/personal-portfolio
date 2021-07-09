@@ -5,7 +5,7 @@ import Newsletter from "../components/Section/Newsletter";
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 mailchimp.setConfig({
-  apiKey: "af3dbd5c89b7198f7ed1b0a662424d92-us6",
+  apiKey: process.env.apiKey,
   server: "us6",
 });
 
