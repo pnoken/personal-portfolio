@@ -10,7 +10,7 @@ module.exports = {
     return config;
   },
   env: {
-    listId: e3a68b9ac3,
-    apiKey: af3dbd5c89b7198f7ed1b0a662424d92 - us6,
+    listId: "e3a68b9ac3",
+    apiKey: "af3dbd5c89b7198f7ed1b0a662424d92-us6",
   },
 };
