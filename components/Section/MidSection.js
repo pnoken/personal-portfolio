@@ -12,13 +12,13 @@ export default function MidSection() {
             </div>
             <div className="col-lg-6">
               <ul>
-                <li>Redux</li>
-                <li>React Hooks</li>
+                <li>State Management with Redux or Context Hooks</li>
+                <li>React with TypeScript</li>
                 <li>Next JS React framework</li>
-                <li>Testing with Jest</li>
-                <li>Bootstrap</li>
-                <li>NodeJS</li>
-                <li>Devops</li>
+                <li>Testing with Jest/ Jasmine / Mocha</li>
+                <li>Bootstrap CSS/SCSS</li>
+                <li>NodeJS with Express & MongoDB </li>
+                <li>Devops with Azure</li>
               </ul>
             </div>
           </div>
