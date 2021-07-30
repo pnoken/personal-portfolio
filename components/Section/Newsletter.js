@@ -10,27 +10,27 @@ export default function Newsletter() {
     email: email,
   };
 
-  async function run() {
-    const response = await mailchimp.lists.addListMember(listId, {
-      email_address: subscribingUser.email,
-      status: "subscribed",
-      // merge_fields: {
-      //   FNAME: subscribingUser.firstName,
-      //   LNAME: subscribingUser.lastName,
-      // },
-    });
+  // async function run() {
+  //   const response = await mailchimp.lists.addListMember(listId, {
+  //     email_address: subscribingUser.email,
+  //     status: "subscribed",
+  //     // merge_fields: {
+  //     //   FNAME: subscribingUser.firstName,
+  //     //   LNAME: subscribingUser.lastName,
+  //     // },
+  //   });
 
-    console.log(
-      `Successfully added contact as an audience member. The contact's id is ${response.id}.`
-    );
-  }
+  //   console.log(
+  //     `Successfully added contact as an audience member. The contact's id is ${response.id}.`
+  //   );
+  // }
 
   return (
     <section style={{ backgroundColor: "#f7fff7" }}>
       <div className="container p-5">
         <div className="row">
           <div className="col-lg-6">
-            <img src="/images/email.png" />
+            <img src="/images/subscribe.svg" style={{maxHeight: "90%", maxWidth: "90%"}} />
           </div>
           <div className="col-lg-6">
             <h3>Let's Interact</h3>

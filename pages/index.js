@@ -9,12 +9,12 @@ mailchimp.setConfig({
   server: "us6",
 });
 
-async function run() {
-  const response = await mailchimp.ping.get();
-  console.log(response);
-}
+// async function run() {
+//   const response = await mailchimp.ping.get();
+//   console.log(response);
+// }
 
-run();
+// run();
 
 export default function Home() {
   return (
