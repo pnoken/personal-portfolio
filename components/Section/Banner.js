@@ -1,11 +1,13 @@
+import Image from "next/image";
+
 export default function Banner() {
   return (
     <section className="container p-5">
       <div className="row">
         <div className="col-lg-6">
-          <img
+          <Image
             className="rounded"
-            src="/images/mtipet.png"
+            src="https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/mtipet.png"
             height="100%"
             width="100%"
           />
