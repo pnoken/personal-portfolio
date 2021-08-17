@@ -1,7 +1,7 @@
 export default function MidSection() {
   return (
     <div>
-      <section className="bg-light">
+      <section>
         <div className="container p-5">
           <h3>Technical Stack</h3>
           <div className="row">

@@ -1,10 +1,21 @@
-export default function Navbar({ title }) {
+export default function Navbar({ themeToggler }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img src="images/pnlogo.svg" style={{objectFit: "contain"}} height="5%" width="6%" />
+          <img
+            src="images/pnlogo.svg"
+            style={{ objectFit: "contain" }}
+            height="5%"
+            width="6%"
+          />
         </a>
+        <span className="p-2">AM</span>
+        <label className="switch">
+          <input type="checkbox" onClick={themeToggler} />
+          <span className="slider round"></span>
+        </label>
+        <span className="p-2">PM</span>
         {/* <button
           className="navbar-toggler"
           type="button"
@@ -18,7 +29,7 @@ export default function Navbar({ title }) {
         </button> */}
         <div className="collapse navbar-collapse" id="navbarScroll">
           {/* <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"> */}
-            {/* <li className="nav-item">
+          {/* <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
                 About Me
               </a>
@@ -28,7 +39,7 @@ export default function Navbar({ title }) {
                 Featured Projects
               </a>
             </li> */}
-            {/* <li className="nav-item dropdown">
+          {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -63,7 +74,7 @@ export default function Navbar({ title }) {
                 </li>
               </ul>
             </li> */}
-            {/* <li className="nav-item">
+          {/* <li className="nav-item">
               <a
                 className="nav-link disabled"
                 href="#"

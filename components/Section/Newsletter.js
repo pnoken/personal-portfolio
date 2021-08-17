@@ -1,59 +1,134 @@
-const mailchimp = require("@mailchimp/mailchimp_marketing");
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import Validation from "../Validations";
+import { AlreadySubscribed } from "./AlreadySubscribed";
+import { Subscribed } from "./Subscribed";
 
 export default function Newsletter() {
-  const [ email, setEmail ] = useState('')
-  const listId = process.env.listId;
-  const subscribingUser = {
-    // firstName: "Prudence",
-    // lastName: "McVankab",
-    email: email,
+  const [subscribe, setSubscribe] = useState("Unsubscribed");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = async (data) => {
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const dat = await res.json();
+    if (dat.duplicate) {
+      setSubscribe("Already Subscribed");
+    } else if (dat.message) {
+      setSubscribe("Success");
+    }
+
+    console.log(dat);
   };
 
-  // async function run() {
-  //   const response = await mailchimp.lists.addListMember(listId, {
-  //     email_address: subscribingUser.email,
-  //     status: "subscribed",
-  //     // merge_fields: {
-  //     //   FNAME: subscribingUser.firstName,
-  //     //   LNAME: subscribingUser.lastName,
-  //     // },
-  //   });
+  // const subscriptionStatus = "Unsubscribed";
 
-  //   console.log(
-  //     `Successfully added contact as an audience member. The contact's id is ${response.id}.`
-  //   );
-  // }
+  switch (subscribe) {
+    case "Already Subscribed":
+      return <AlreadySubscribed />;
+    case "Success":
+      return <Subscribed />;
+    default:
+      return (
+        <section style={{ backgroundColor: "#BDDAFF" }}>
+          <div className="container p-5">
+            <div className="row">
+              <div className="col-lg-6">
+                <img
+                  src="/images/subscribe.svg"
+                  style={{ maxHeight: "90%", maxWidth: "90%" }}
+                />
+              </div>
+              <div className="col-lg-6">
+                <h3>Let's Interact</h3>
+                <p>
+                  Subscribe to my newsletter and receive updates about trending
+                  technologies relating to web development
+                </p>
 
-  return (
-    <section style={{ backgroundColor: "#f7fff7" }}>
-      <div className="container p-5">
-        <div className="row">
-          <div className="col-lg-6">
-            <img src="/images/subscribe.svg" style={{maxHeight: "90%", maxWidth: "90%"}} />
+                <form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
+                  <input
+                    className="form-control me-2"
+                    type="subscribe"
+                    {...register("email", {
+                      required: true,
+                      pattern:
+                        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                    })}
+                    placeholder="Please Enter Email"
+                    aria-label="Subscribe"
+                  />
+                  <button className="btn btn-outline-success" type="submit">
+                    Subscribe
+                  </button>
+                </form>
+                {errors.email && (
+                  <Validation variant="danger">
+                    {errors.email?.type === "required" && "Email is required"}
+                    {errors.email?.type === "pattern" && "Email is not valid"}
+                  </Validation>
+                )}
+              </div>
+            </div>
           </div>
-          <div className="col-lg-6">
-            <h3>Let's Interact</h3>
-            <p>
-              Subscribe to my newsletter and receive updates about trending
-              technologies relating to web development
-            </p>
-            <form className="d-flex" onSubmit={(e) => { e.preventDefault(); run()}}>
-              <input
-                className="form-control me-2"
-                type="subscribe"
-                placeholder="Please Enter Email"
-                aria-label="Subscribe"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+      );
+  }
+
+  // return (
+  //   <section style={{ backgroundColor: "#f7fff7" }}>
+  //     {subscribe === "Success" ? (
+  //       <Subscribed />
+  //     ) : subscribe === "Already Subscribed" ? (
+  //       <AlreadySubscribed />
+  //     ) : (
+  //       <div className="container p-5">
+  //         <div className="row">
+  //           <div className="col-lg-6">
+  //             <img
+  //               src="/images/subscribe.svg"
+  //               style={{ maxHeight: "90%", maxWidth: "90%" }}
+  //             />
+  //           </div>
+  //           <div className="col-lg-6">
+  //             <h3>Let's Interact</h3>
+  //             <p>
+  //               Subscribe to my newsletter and receive updates about trending
+  //               technologies relating to web development
+  //             </p>
+
+  //             <form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
+  //               <input
+  //                 className="form-control me-2"
+  //                 type="subscribe"
+  //                 {...register("email", {
+  //                   required: true,
+  //                   pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+  //                 })}
+  //                 placeholder="Please Enter Email"
+  //                 aria-label="Subscribe"
+  //               />
+  //               <button className="btn btn-outline-success" type="submit">
+  //                 Subscribe
+  //               </button>
+  //             </form>
+  //             {errors.email && (
+  //               <Validation variant="danger">
+  //                 {errors.email?.type === "required" && "Email is required"}
+  //                 {errors.email?.type === "pattern" && "Email is not valid"}
+  //               </Validation>
+  //             )}
+  //           </div>
+  //         </div>
+  //       </div>
+  //     )}
+  //   </section>
+  // );
 }
