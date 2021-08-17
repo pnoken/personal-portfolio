@@ -5,7 +5,7 @@ export default function Banner() {
     <section className="container p-5">
       <div className="row">
         <div className="col-lg-6">
-          <Image
+          <img
             className="rounded"
             src="https://ecex.s3.eu-west-2.amazonaws.com/peter/personal-photos/mtipet.png"
             height="100%"
