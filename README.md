@@ -1,3 +1,3 @@
-# personal-portfolio
+# Personal Portfolio
 
-This Project is 
+This Project was created primarily with Bootstrap and NextJS.
