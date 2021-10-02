@@ -9,7 +9,6 @@ export default function MainLayout({ title, children }) {
   const [checked, setChecked] = useState(false);
   const themeToggler = (e) => {
     let checked = e.target.checked;
-    console.log("checked", checked);
     checked
       ? (setTheme("dark"), localStorage.setItem("theme", "dark"))
       : (setTheme("light"),
