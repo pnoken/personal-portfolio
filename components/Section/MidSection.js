@@ -1,7 +1,7 @@
 export default function MidSection() {
   return (
     <div>
-      <section>
+      <section style={{ border: "2px solid black" }}>
         <div className="container p-5">
           <h3>Technical Stack</h3>
           <div className="row">

@@ -23,14 +23,6 @@ export default function MainLayout({ title, children }) {
     }
   }, []);
 
-  // Router.onRouteChangeStart = (url) => {
-  //   NProgress.start();
-  // };
-
-  // Router.onRouteChangeComplete = () => NProgress.done();
-
-  // Router.onRouteChangeError = () => NProgress.done();
-
   return (
     <div className={theme === "light" ? "" : styles.body}>
       <Header title={title || "Peter Nortey"} />

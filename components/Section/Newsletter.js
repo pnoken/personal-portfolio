@@ -37,7 +37,7 @@ export default function Newsletter() {
       return <Subscribed />;
     default:
       return (
-        <section style={{ backgroundColor: "#BDDAFF" }}>
+        <section style={{ border: "2px solid black" }}>
           <div className="container p-5">
             <div className="row">
               <div className="col-lg-6">
@@ -46,7 +46,7 @@ export default function Newsletter() {
                   style={{ maxHeight: "90%", maxWidth: "90%" }}
                 />
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 mx-auto">
                 <h3>Let's Interact</h3>
                 <p>
                   Subscribe to my newsletter and receive updates about trending

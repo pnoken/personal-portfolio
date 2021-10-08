@@ -1,6 +1,6 @@
 export default function Navbar({ themeToggler, checked }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img
