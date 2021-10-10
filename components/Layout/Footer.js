@@ -1,21 +1,21 @@
 export default function Footer() {
   return (
     <footer>
-      <section className="p-5" style={{ border: "2px solid black" }}>
+      <section>
         <div className="container">
           <h3>Let's Connect</h3>
-          <a href="https://www.facebook.com/norteypeter" target="_blank">
+          <a href="https://www.github.com/pnoken" target="_blank">
             <img
               className="p-2"
-              src="/images/fb.svg"
+              src="/images/github.png"
               height="50px"
               width="50px"
             />
           </a>
-          <a href="https://www.instagram.com/pnoken" target="_blank">
+          <a href="https://www.twitter.com/pnoken" target="_blank">
             <img
               className="p-2"
-              src="/images/ig.svg"
+              src="/images/twitter.png"
               height="50px"
               width="50px"
             />
@@ -30,11 +30,11 @@ export default function Footer() {
           </a>
         </div>
       </section>
-      <section className="bg-dark text-light">
-        <div className="container">
+      {/* <section className="bg-dark text-light">
+        <div className="">
           <p>Copyright © 2021 by Peter Nortey. All rights reserved.</p>
         </div>
-      </section>
+      </section> */}
     </footer>
   );
 }

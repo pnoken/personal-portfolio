@@ -37,7 +37,7 @@ export default function Newsletter() {
       return <Subscribed />;
     default:
       return (
-        <section style={{ border: "2px solid black" }}>
+        <section>
           <div className="container p-5">
             <div className="row">
               <div className="col-lg-6">
@@ -46,7 +46,13 @@ export default function Newsletter() {
                   style={{ maxHeight: "90%", maxWidth: "90%" }}
                 />
               </div>
-              <div className="col-lg-6 mx-auto">
+              <div
+                className="col-lg-6 mx-auto"
+                style={{
+                  boxSizing: "border-box",
+                  paddingTop: "6%",
+                }}
+              >
                 <h3>Let's Interact</h3>
                 <p>
                   Subscribe to my newsletter and receive updates about trending
