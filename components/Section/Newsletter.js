@@ -6,14 +6,12 @@ import { Subscribed } from "./Subscribed";
 
 export default function Newsletter() {
   const [subscribe, setSubscribe] = useState("Unsubscribed");
-  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    setLoading(true);
     const res = await fetch("/api/subscribe", {
       method: "POST",
       body: JSON.stringify(data),
@@ -27,14 +25,14 @@ export default function Newsletter() {
       setSubscribe("Success");
     }
 
-    setLoading(false);
+    console.log(dat);
   };
 
   // const subscriptionStatus = "Unsubscribed";
 
   switch (subscribe) {
-    case "Already Subscribed":
-      return <AlreadySubscribed />;
+    // case "Already Subscribed":
+    //   return <AlreadySubscribed />;
     case "Success":
       return <Subscribed />;
     default:
@@ -73,29 +71,16 @@ export default function Newsletter() {
                     placeholder="Please Enter Email"
                     aria-label="Subscribe"
                   />
-                  {loading ? (
-                    <button
-                      className="btn btn-outline-success"
-                      type="button"
-                      disabled
-                    >
-                      <span
-                        class="spinner-border spinner-border-sm"
-                        role="status"
-                        aria-hidden="true"
-                      ></span>
-                      Laoding...
-                    </button>
-                  ) : (
-                    <button className="btn btn-outline-success" type="submit">
-                      Subscribe
-                    </button>
-                  )}
+                  <button className="btn btn-outline-success" type="submit">
+                    Subscribe
+                  </button>
                 </form>
                 {errors.email && (
                   <Validation variant="danger">
                     {errors.email?.type === "required" && "Email is required"}
                     {errors.email?.type === "pattern" && "Email is not valid"}
+                    {Subscribed === "Already Subscirbed" &&
+                      "Already Subscribed"}
                   </Validation>
                 )}
               </div>
