@@ -6,12 +6,14 @@ import { Subscribed } from "./Subscribed";
 
 export default function Newsletter() {
   const [subscribe, setSubscribe] = useState("Unsubscribed");
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
+    setLoading(true);
     const res = await fetch("/api/subscribe", {
       method: "POST",
       body: JSON.stringify(data),
@@ -25,7 +27,7 @@ export default function Newsletter() {
       setSubscribe("Success");
     }
 
-    console.log(dat);
+    setLoading(false);
   };
 
   // const subscriptionStatus = "Unsubscribed";
@@ -71,9 +73,24 @@ export default function Newsletter() {
                     placeholder="Please Enter Email"
                     aria-label="Subscribe"
                   />
-                  <button className="btn btn-outline-success" type="submit">
-                    Subscribe
-                  </button>
+                  {loading ? (
+                    <button
+                      className="btn btn-outline-success"
+                      type="button"
+                      disabled
+                    >
+                      <span
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      Laoding...
+                    </button>
+                  ) : (
+                    <button className="btn btn-outline-success" type="submit">
+                      Subscribe
+                    </button>
+                  )}
                 </form>
                 {errors.email && (
                   <Validation variant="danger">
@@ -87,54 +104,4 @@ export default function Newsletter() {
         </section>
       );
   }
-
-  // return (
-  //   <section style={{ backgroundColor: "#f7fff7" }}>
-  //     {subscribe === "Success" ? (
-  //       <Subscribed />
-  //     ) : subscribe === "Already Subscribed" ? (
-  //       <AlreadySubscribed />
-  //     ) : (
-  //       <div className="container p-5">
-  //         <div className="row">
-  //           <div className="col-lg-6">
-  //             <img
-  //               src="/images/subscribe.svg"
-  //               style={{ maxHeight: "90%", maxWidth: "90%" }}
-  //             />
-  //           </div>
-  //           <div className="col-lg-6">
-  //             <h3>Let's Interact</h3>
-  //             <p>
-  //               Subscribe to my newsletter and receive updates about trending
-  //               technologies relating to web development
-  //             </p>
-
-  //             <form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
-  //               <input
-  //                 className="form-control me-2"
-  //                 type="subscribe"
-  //                 {...register("email", {
-  //                   required: true,
-  //                   pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-  //                 })}
-  //                 placeholder="Please Enter Email"
-  //                 aria-label="Subscribe"
-  //               />
-  //               <button className="btn btn-outline-success" type="submit">
-  //                 Subscribe
-  //               </button>
-  //             </form>
-  //             {errors.email && (
-  //               <Validation variant="danger">
-  //                 {errors.email?.type === "required" && "Email is required"}
-  //                 {errors.email?.type === "pattern" && "Email is not valid"}
-  //               </Validation>
-  //             )}
-  //           </div>
-  //         </div>
-  //       </div>
-  //     )}
-  //   </section>
-  // );
 }
