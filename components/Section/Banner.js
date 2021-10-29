@@ -7,7 +7,7 @@ export default function Banner() {
         <div className="col-lg-6">
           <img
             className="rounded"
-            src="/images/mtipet.png"
+            src="/images/mtipet.jpg"
             height="100%"
             width="100%"
           />
