@@ -11,27 +11,27 @@ export default function MidSection() {
               <img className="p-2" src="/images/node.svg" />
             </div>
             <div className="col-lg-6">
-              <ul style={{ listStyleType: "none" }}>
+              <ul style={{ listStyleType: "circle" }}>
                 <li>
-                  <code>State Management with MobX, Redux or UseContext</code>
+                  <p>State Management with MobX, Redux or UseContext</p>
                 </li>
                 <li>
-                  <code>React with TypeScript</code>
+                  <p>React with TypeScript</p>
                 </li>
                 <li>
-                  <code>Next JS / Gatsby React framework</code>
+                  <p>Next JS / Gatsby React framework</p>
                 </li>
                 <li>
-                  <code>Testing with Jest / Jasmine / Mocha</code>
+                  <p>Testing with Jest / Jasmine / Mocha</p>
                 </li>
                 <li>
-                  <code>Bootstrap / SCSS / Material UI / Tailwind CSS</code>
+                  <p>Bootstrap / SCSS / Material UI / Tailwind CSS</p>
                 </li>
                 <li>
-                  <code>NodeJS with Express & MongoDB / GraphQl </code>
+                  <p>NodeJS with Express & MongoDB / GraphQl </p>
                 </li>
                 <li>
-                  <code>Devops with Azure</code>
+                  <p>Devops with Azure</p>
                 </li>
               </ul>
             </div>

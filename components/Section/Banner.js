@@ -13,29 +13,24 @@ export default function Banner() {
           />
         </div>
         <div className="col-lg-6">
-          <h1>
-            <code>I'm Peter Nortey</code>
-          </h1>
-          <h2>
-            <code>Software Developer</code>
-          </h2>
-          <h3>
-            <code>I love developing JavaScript web applications</code>
-          </h3>
-          <h3>
-            <code>2+ years experience developing React applications</code>
-          </h3>
-          <h3>
-            <code>1+ years experience with NodeJS</code>
-          </h3>
-          <h3>
-            <code>
-              Recently interested in Blockchain Application Development with
-              Solidity
-            </code>
-          </h3>
+          <h1>I'm Peter Nortey</h1>
+          <h4>Software Engineer</h4>
+          <div className="mt-3">
+            <p>
+              Self taught JavaScript Developer with 2+ years experience
+              developing applications with React & NodeJS. Recently I have
+              developed interested in Blockchain Application Development with
+              Solidity. I also offer free crypto advice and strategy at Coinly.
+            </p>
+          </div>
+
           <a href="mailto:norteypeter@gmail.com">
-            <button className="btn btn-lg btn-primary">Contact Me</button>
+            <button
+              style={{ borderRadius: "25px" }}
+              className="btn btn-lg btn-primary mt-3"
+            >
+              Contact Me
+            </button>
           </a>
         </div>
       </div>
