@@ -9,7 +9,7 @@ async function mailhandler(req, res) {
     const db = client.db();
 
     const collection = db.collection("list");
-    let foundEmail = await collection.findOne({ email: req.body.email });
+    let foundEmail = await collection.findOne({ email: email });
     if (foundEmail) {
       return res.status(409).send({ duplicate: "Email already subscribed!" });
     }
