@@ -62,6 +62,7 @@ export default function Newsletter() {
                 <form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
                   <input
                     className="form-control me-2"
+                    style={{ borderRadius: "25px" }}
                     type="subscribe"
                     {...register("email", {
                       required: true,
@@ -71,7 +72,11 @@ export default function Newsletter() {
                     placeholder="Please Enter Email"
                     aria-label="Subscribe"
                   />
-                  <button className="btn btn-outline-success" type="submit">
+                  <button
+                    style={{ borderRadius: "25px" }}
+                    className="btn btn-primary"
+                    type="submit"
+                  >
                     Subscribe
                   </button>
                 </form>
