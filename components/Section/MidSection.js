@@ -5,7 +5,7 @@ export default function MidSection() {
         <div className="container p-5">
           <div className="row">
             <div className="col-lg-6">
-              <h3>Technical Stack</h3>
+              <h3 className="fw-bold">Technical Stack</h3>
               <img className="p-2" src="/images/js.svg" />{" "}
               <img className="p-2" src="/images/react.svg" />
               <img className="p-2" src="/images/node.svg" />

@@ -3,7 +3,7 @@ export default function Footer() {
     <footer>
       <section>
         <div className="container">
-          <h3>Let's Connect</h3>
+          <h3 className="fw-bold">Let's Connect</h3>
           <a href="https://www.github.com/pnoken" target="_blank">
             <img
               className="p-2"
