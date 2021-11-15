@@ -53,7 +53,7 @@ export default function Newsletter() {
                   paddingTop: "6%",
                 }}
               >
-                <h3>Let's Interact</h3>
+                <h3 className="fw-bold">Let's Interact</h3>
                 <p>
                   Subscribe to my newsletter and receive updates about trending
                   technologies relating to web development

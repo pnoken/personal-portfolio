@@ -13,8 +13,8 @@ export default function Banner() {
           />
         </div>
         <div className="col-lg-6">
-          <h1>I'm Peter Nortey</h1>
-          <h4>Software Engineer</h4>
+          <h1 className="fw-bolder">I'm Peter Nortey</h1>
+          <h4 className="fw-bold">Software Engineer</h4>
           <div className="mt-3">
             <p>
               Self taught JavaScript Developer with 2+ years experience
