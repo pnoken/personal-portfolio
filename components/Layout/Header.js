@@ -9,14 +9,13 @@ export default function Header({ title }) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         property="og:description"
-        content="I am Peter Nortey, A JavaScript Developer with over two years professional experience as a frontend developer."
+        content="Self taught JavaScript Developer with 2+ years experience developing applications with React & NodeJS. Recently I have developed interested in Blockchain Application Development with Solidity. I also offer free crypto advice and strategy at Coinly."
       />
       <meta
         name="keywords"
         content="HTML, CSS, JavaScript, Software Engineer, Peter, React, NodeJS, Ghana, Software Developer in Accra"
       />
       <meta property="og:image" content="/images/mtipet.jpg" />
-      <meta name="author" content="Peter Nortey" />
       <link
         href="https://fonts.googleapis.com/css2?family=Krona+One&display=optional"
         rel="stylesheet"
