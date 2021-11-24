@@ -7,6 +7,7 @@ export default function Header({ title }) {
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta property="og:title" content={title} />
       <meta
         property="og:description"
         content="Self taught JavaScript Developer with 2+ years experience developing applications with React & NodeJS. Recently I have developed interested in Blockchain Application Development with Solidity. I also offer free crypto advice and strategy at Coinly."
