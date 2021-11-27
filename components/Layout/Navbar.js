@@ -10,13 +10,7 @@ export default function Navbar({ themeToggler, checked }) {
             width="6%"
           />
         </a>
-        <a
-          className="navbar-brand"
-          href="https://blog.pnortey.com"
-          target="_blank"
-        >
-          <h3 className="text-secondary">Blog</h3>
-        </a>
+
         <span className="p-2">AM</span>
         <label className="switch">
           {checked ? (
