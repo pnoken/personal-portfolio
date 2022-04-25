@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Banner() {
   return (
     <section className="container p-5">
@@ -7,7 +5,7 @@ export default function Banner() {
         <div className="col-lg-6">
           <img
             className="rounded"
-            src="/images/mtipet.jpg"
+            src="/images/profile.png"
             height="100%"
             width="100%"
           />
