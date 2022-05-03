@@ -17,7 +17,7 @@ export default function Banner() {
             <p>
               Self taught JavaScript Developer with 3+ years experience
               developing applications with React & NodeJS. Recently I have
-              developed interested in Blockchain Application Development with
+              developed interest in Blockchain Application Development with
               Solidity. I also offer free crypto advice and strategy at Coinly.
             </p>
           </div>
