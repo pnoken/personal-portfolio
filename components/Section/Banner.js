@@ -15,7 +15,7 @@ export default function Banner() {
           <h4 className="fw-bold">Software Engineer</h4>
           <div className="mt-3">
             <p>
-              Self taught JavaScript Developer with 3+ years experience
+              Self taught JavaScript Developer with 4+ years experience
               developing applications with React & NodeJS. Recently I have
               developed interest in Blockchain Application Development with
               Solidity. I also offer free crypto advice and strategy at Coinly.
