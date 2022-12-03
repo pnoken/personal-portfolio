@@ -30,11 +30,6 @@ export default function Footer() {
           </a>
         </div>
       </section>
-      {/* <section className="bg-dark text-light">
-        <div className="">
-          <p>Copyright © 2021 by Peter Nortey. All rights reserved.</p>
-        </div>
-      </section> */}
     </footer>
   );
 }
